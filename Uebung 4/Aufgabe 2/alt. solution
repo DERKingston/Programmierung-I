@@ -1,0 +1,27 @@
+public class Jahr {
+
+	public static void main (String [] args){
+		int jahr;
+		
+		jahr = 2004;
+		
+		if ((jahr <= 1581) ? (true):(false))
+			System.out.println("Jahreszahl zu klein.");
+		else if ((jahr%4 == 0) ? (true) : (false)){
+			if ((jahr%100 == 0) ? (true) : (false)){
+				if ((jahr%400 ==0) ? (true) : (false)){
+					System.out.println(jahr + " ist ein Schaltjahr.");
+				} 
+				else {
+					System.out.println(jahr + " ist kein Schaltjahr.");
+				}
+			}
+			else {
+				System.out.println(jahr + " ist ein Schaltjahr.");
+			}
+		}
+		else {
+			System.out.println(jahr + " ist kein Schaltjahr.");
+		}
+	}
+}
