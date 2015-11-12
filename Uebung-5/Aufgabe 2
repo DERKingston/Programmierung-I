@@ -1,0 +1,81 @@
+class Bibliothek {
+	
+	class Buch {
+		String titel;
+		String autor;
+		String genre;
+	
+	
+		Buch (String titel, String autor, String genre){
+			this.titel = titel;
+			this.autor = autor;
+			this.genre = genre;
+		}
+	
+		Buch (String titel, String autor){
+			this.titel = titel;
+			this.autor = autor;
+			this.genre = "unbekannt";
+		}
+		
+		Buch (String titel){
+			this.titel = titel;
+			this.autor = "unbekannt";
+			this.genre = "unbekannt";
+		}
+		
+		Buch (){
+			this.titel = "kein Eintrag";
+			this.autor = "kein Eintrag";
+			this.genre = "kein Eintrag";
+		}
+	
+    String getAutor() {
+	    return this.autor;
+    }
+
+    String getTitel() {
+	    return this.titel;
+    }
+
+    String getGenre() {
+	    return this.genre;
+    }
+		
+}
+	
+	public static void main(String[] args) {
+		Buch anhad = new Buch ("Per Anhalter durch die Galaxis", "Douglas Adams", "Sci-Fi");
+		Buch comal = new Buch ("La Commedia", "Dante Alighieri");
+		Buch shiki = new Buch ("The Shining", "Stephen King", "Horror");
+		Buch resad = new Buch ("Das Restaurant am Ende des Universums", "Douglas Adams", "Sci-Fi");
+		Buch lebad = new Buch ("Das Leben, das Universum und der ganze Rest", "Douglas Adams", "Sci-Fi");
+		Buch fisad = new Buch ("Macht's gut und danke fÃ¼r den Fisch", "Douglas Adams", "Sci-Fi");
+		Buch rupad = new Buch ("Einmal Rupert und zurÃ¼ck", "Douglas Adams", "Sci-Fi");
+		Buch margr = new Buch ("Margos Spuren", "John Green");
+		Buch resja = new Buch ("Restrisiko", "Michl Jakob");
+		Buch nope1 = new Buch ();
+		
+
+		Buch[] buecher = new Buch[10];
+		buecher[0] = anhad;
+		buecher[1] = comal;
+		buecher[2] = resad;
+		buecher[3] = lebad;
+		buecher[4] = fisad;
+		buecher[5] = rupad;
+		buecher[6] = margr;
+		buecher[7] = shiki;
+		buecher[8] = resja;
+		buecher[9] = nope1;
+
+		
+			for (int i = 0; i < buecher.length; ++i) {
+				if (buecher[i].get_autor() == "Douglas Adams") {
+					System.out.println(buecher[i].get_titel());	
+				} else {
+					continue;
+				}
+			}
+	}
+}
